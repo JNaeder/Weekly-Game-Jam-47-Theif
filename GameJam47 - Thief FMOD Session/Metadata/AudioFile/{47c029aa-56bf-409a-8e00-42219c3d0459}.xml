@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{47c029aa-56bf-409a-8e00-42219c3d0459}">
+        <property name="assetPath">
+            <value>DeathSound.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.6867120181405895</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{acfdb34c-f368-4f66-afdd-493215f05bfc}</destination>
+        </relationship>
+    </object>
+</objects>

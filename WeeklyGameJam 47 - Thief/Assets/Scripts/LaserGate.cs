@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class LaserGate : MonoBehaviour {
 
@@ -12,7 +13,12 @@ public class LaserGate : MonoBehaviour {
 	bool isOn;
 	Vector3 transScale, onScale, offScale;
 
-	float startLength, triggerTime;
+	float startLength, triggerTime, sizePerc;
+
+    [FMODUnity.EventRef]
+    public string laserSound;
+
+    FMOD.Studio.EventInstance laserSoundInst;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +26,11 @@ public class LaserGate : MonoBehaviour {
 
 		onScale = new Vector3(1, startLength, 1);
 		offScale = new Vector3(1, 0, 0);
+
+
+        laserSoundInst = FMODUnity.RuntimeManager.CreateInstance(laserSound);
+        laserSoundInst.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
+        laserSoundInst.start();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +38,9 @@ public class LaserGate : MonoBehaviour {
 		transScale = laser.localScale;      
 		UpdateLaser();      
 		laser.localScale = transScale;
+
+        sizePerc = transScale.y / startLength;
+        laserSoundInst.setParameterValue("Size", sizePerc);
 
 
 		if(Time.time > triggerTime + time){

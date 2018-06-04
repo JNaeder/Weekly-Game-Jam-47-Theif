@@ -160,6 +160,7 @@ MonoBehaviour:
   laser: {fileID: 4040434354063972}
   time: 2.5
   speed: 5
+  laserSound: event:/LaserGate
 --- !u!212 &212322197491441966
 SpriteRenderer:
   m_ObjectHideFlags: 1

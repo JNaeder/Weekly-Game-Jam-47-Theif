@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class LaserGun : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class LaserGun : MonoBehaviour
 	public Transform muzzle;
 
 	Animator anim;
+
+    [FMODUnity.EventRef]
+    public string laserShootSound;
 
 	// Use this for initialization
 	void Start()
@@ -44,6 +48,7 @@ public class LaserGun : MonoBehaviour
 		GameObject firedLaser = Instantiate(laser, muzzle.position, transform.rotation);
 		Rigidbody2D laserRB = firedLaser.GetComponent<Rigidbody2D>();
 		laserRB.AddForce(-transform.up * laserSpeed, ForceMode2D.Impulse);
+        FMODUnity.RuntimeManager.PlayOneShot(laserShootSound, transform.position);
 
-	}
+    }
 }

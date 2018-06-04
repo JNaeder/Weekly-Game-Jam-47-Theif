@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Camera : MonoBehaviour {
 
@@ -10,15 +11,26 @@ public class Camera : MonoBehaviour {
 
 	public float speed;
 	public float thresh;
+    public float waitTime;
 
-	bool moveForward;
+    float newTime;
+
+	bool moveForward, camSoundStarted;
 
 	Quaternion transRot;
     Vector3 dir;
     float dist, newAngle;
 
+    [FMODUnity.EventRef]
+    public string camMotorSound, camMoveStopSound;
+
+    FMOD.Studio.EventInstance camMotorInst;
+
 	// Use this for initialization
 	void Start () {
+        camMotorInst = FMODUnity.RuntimeManager.CreateInstance(camMotorSound);
+        camMotorInst.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
+        StartCamSound();
     }
 	
 	// Update is called once per frame
@@ -36,23 +48,45 @@ public class Camera : MonoBehaviour {
         dir = movingPoint.position - camPoint.position;
         newAngle = (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg) + 270;
 
-
+        
 
 
         if (moveForward) {
+            if (Time.time > newTime + waitTime)
+            {
+                if (camSoundStarted == false) {
+                    StartCamSound();
+                }
 
-            movingPoint.position = Vector3.MoveTowards(movingPoint.position, point2.position, speed * Time.deltaTime);
-            dist = Vector3.Distance(point2.position, movingPoint.position);
-            if (dist < thresh) {
-                moveForward = !moveForward;
+                movingPoint.position = Vector3.MoveTowards(movingPoint.position, point2.position, speed * Time.deltaTime);
+                dist = Vector3.Distance(point2.position, movingPoint.position);
+                if (dist < thresh)
+                {
+                    newTime = Time.time;
+                    FMODUnity.RuntimeManager.PlayOneShot(camMoveStopSound, transform.position);
+                    camMotorInst.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    camSoundStarted = false;
+                    moveForward = !moveForward;
+                }
             }
             }
         else {
-            movingPoint.position = Vector3.MoveTowards(movingPoint.position, point1.position, speed * Time.deltaTime);
-            dist = Vector3.Distance(point1.position, movingPoint.position);
-            if (dist < thresh)
+            if (Time.time > newTime + waitTime)
             {
-                moveForward = !moveForward;
+                if (camSoundStarted == false)
+                {
+                    StartCamSound();
+                }
+                movingPoint.position = Vector3.MoveTowards(movingPoint.position, point1.position, speed * Time.deltaTime);
+                dist = Vector3.Distance(point1.position, movingPoint.position);
+                if (dist < thresh)
+                {
+                    newTime = Time.time;
+                    FMODUnity.RuntimeManager.PlayOneShot(camMoveStopSound, transform.position);
+                    camMotorInst.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    camSoundStarted = false;
+                    moveForward = !moveForward;
+                }
             }
         }
 
@@ -74,8 +108,18 @@ public class Camera : MonoBehaviour {
             if (hit.collider.gameObject.tag == "Player")
             {
                 print("SEE PLAYER!");
+                Guy_Controller guy = hit.collider.gameObject.GetComponent<Guy_Controller>();
+                guy.GetCaught();
 
             }
         }
 	}
+
+
+
+    void StartCamSound() {
+        camSoundStarted = true;
+        camMotorInst.start();
+
+    }
 }

@@ -100,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507056652198044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.49, y: -3.09, z: 0}
+  m_LocalPosition: {x: -13.17, y: -7.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4874423555955820}
@@ -125,8 +125,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749566281519550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.74, y: 5.12, z: -0.109375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 323.22174, y: 8.93386, z: -0.109375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4034136862938858}
@@ -264,8 +264,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 1214527328066520, guid: ba8a7a076b2d14575beded37008116e5, type: 2}
   laserSpeed: 10
-  fireRate: 1.2
+  fireRate: 1
   muzzle: {fileID: 4662695150326224}
+  laserShootSound: event:/LaserShot
 --- !u!212 &212079694881090038
 SpriteRenderer:
   m_ObjectHideFlags: 1
