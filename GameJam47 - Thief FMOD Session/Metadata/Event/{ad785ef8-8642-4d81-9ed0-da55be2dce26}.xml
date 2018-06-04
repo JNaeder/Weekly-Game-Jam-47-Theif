@@ -241,9 +241,6 @@
         <property name="length">
             <value>17.142857142857142</value>
         </property>
-        <property name="quantizationInterval">
-            <value>2</value>
-        </property>
         <relationship name="triggerConditions">
             <destination>{f73f9576-ba19-4c2e-af71-7d480f46b382}</destination>
         </relationship>

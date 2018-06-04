@@ -21,6 +21,7 @@ public class LaserGun : MonoBehaviour
 	void Start()
 	{
 		anim = GetComponent<Animator>();
+		StartGun();
 	}
 
 	// Update is called once per frame

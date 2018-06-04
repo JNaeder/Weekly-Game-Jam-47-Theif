@@ -14,7 +14,7 @@ public class CameraScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         Vector3 transPos = transform.position;
         transPos = Vector3.Lerp(transPos, target.position + diff, camSpeed * Time.deltaTime);
         transform.position = transPos;

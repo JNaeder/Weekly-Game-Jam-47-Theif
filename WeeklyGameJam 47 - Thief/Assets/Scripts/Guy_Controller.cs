@@ -60,7 +60,15 @@ public class Guy_Controller : MonoBehaviour {
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Enemy")
+        {
+            Death();
+        }
+	}
+
+	private void OnCollisionExit2D(Collision2D collision)
     {
         isTouchingGround = false;
     }

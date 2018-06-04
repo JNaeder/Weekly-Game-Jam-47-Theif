@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\John\Documents\GitHub\Weekly-Game-Jam-47-Theif\GameJam47
-    - Thief FMOD Session\GameJam47 - Thief FMOD Session.fspro
-  SourceProjectPathUnformatted: C:\Users\John\Documents\GitHub\Weekly-Game-Jam-47-Theif\GameJam47
-    - Thief FMOD Session\GameJam47 - Thief FMOD Session.fspro
-  SourceBankPathUnformatted: C:\Users\John\Documents\GitHub\Weekly-Game-Jam-47-Theif\GameJam47
-    - Thief FMOD Session\Build
+  sourceProjectPath: /Users/John/Documents/GitHub/Weekly-Game-Jam-47-Theif/GameJam47
+    - Thief FMOD Session/GameJam47 - Thief FMOD Session.fspro
+  SourceProjectPathUnformatted: /Users/John/Documents/GitHub/Weekly-Game-Jam-47-Theif/GameJam47
+    - Thief FMOD Session/GameJam47 - Thief FMOD Session.fspro
+  SourceBankPathUnformatted: /Users/John/Documents/GitHub/Weekly-Game-Jam-47-Theif/GameJam47
+    - Thief FMOD Session/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
