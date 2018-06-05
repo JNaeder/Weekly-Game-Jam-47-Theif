@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-	public GameObject gameOverScreen, caughtScreen;
-	public GameObject restartButton, restartButton2;
+	public GameObject gameOverScreen, caughtScreen, winScreen;
+	public GameObject restartButton, restartButton2, restartButton3;
 	public EventSystem eS;
 
     public Transform[] checkpoints;
@@ -16,12 +16,13 @@ public class GameManager : MonoBehaviour {
 
     Guy_Controller guy;
     CameraScript cam;
-
+	Computer[] comps;
 
 	// Use this for initialization
 	void Start () {
         guy = FindObjectOfType<Guy_Controller>();
         cam = FindObjectOfType<CameraScript>();
+		comps = FindObjectsOfType<Computer>();
 	}
 	
 	// Update is called once per frame
@@ -48,9 +49,27 @@ public class GameManager : MonoBehaviour {
         guy.ResetEverything();
         guy.transform.position = checkpoints[checkNum].position;
         cam.transform.position = checkpoints[checkNum].position;
+		foreach(Computer c in comps){
+			c.isActive = false;
+			c.CloseDoor();
+		}
         gameOverScreen.SetActive(false);
         caughtScreen.SetActive(false);
+		winScreen.SetActive(false);
        
 		//SceneManager.LoadScene(0);
+	}
+
+
+	public void WinScreen(){
+		winScreen.SetActive(true);
+		eS.SetSelectedGameObject(restartButton3);
+
+	}
+
+
+	public void ReLoadLevel(){
+
+		SceneManager.LoadScene(0);
 	}
 }

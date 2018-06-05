@@ -107,7 +107,7 @@ public class Camera : MonoBehaviour {
         {
             if (hit.collider.gameObject.tag == "Player")
             {
-                print("SEE PLAYER!");
+                //  print("SEE PLAYER!");
                 Guy_Controller guy = hit.collider.gameObject.GetComponent<Guy_Controller>();
                 guy.GetCaught();
 
