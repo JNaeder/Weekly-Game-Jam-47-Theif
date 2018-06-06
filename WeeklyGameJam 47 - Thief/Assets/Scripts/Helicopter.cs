@@ -9,13 +9,14 @@ public class Helicopter : MonoBehaviour {
 	public Transform hangingTrans;
 	public float speed;
 
+    public bool flysRightAway;
+
+    bool isFlying;
+
 	Guy_Controller guy;
 
 	Collider2D coll;
 	GameManager gM;
-
-
-	bool isFlying;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,11 @@ public class Helicopter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		anim.SetBool("isFlying", isFlying);
-
+        if (!isFlying) {
+            if (flysRightAway) {
+                isFlying = true;
+            }
+        }
 
 	}
 
@@ -36,7 +41,10 @@ public class Helicopter : MonoBehaviour {
 	{
 		if (isFlying == true)
         {
-            guy.transform.position = hangingTrans.position;
+            if (hangingTrans != null)
+            {
+                guy.transform.position = hangingTrans.position;
+            }
 
 
             transform.position += new Vector3(0, 1, 0) * speed * Time.deltaTime;

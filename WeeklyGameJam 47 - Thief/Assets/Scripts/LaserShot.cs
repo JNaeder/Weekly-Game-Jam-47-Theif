@@ -16,8 +16,13 @@ public class LaserShot : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		Guy_Controller guy = collision.gameObject.GetComponent<Guy_Controller>();
-		guy.Death();
-		Destroy(gameObject);
-	}
+        if (collision.gameObject.tag == "Player")
+        {
+
+            Guy_Controller guy = collision.gameObject.GetComponent<Guy_Controller>();
+            guy.Death();
+        }
+
+        Destroy(gameObject, 0.01f);
+    }
 }

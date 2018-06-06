@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114297721788165646}
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   EditorEvents:
   - {fileID: 114784332949861924}
   - {fileID: 114266493022205084}
@@ -26,9 +26,9 @@ MonoBehaviour:
   - {fileID: 114214205354925866}
   - {fileID: 114428595219217504}
   - {fileID: 114285908148644304}
-  MasterBankRef: {fileID: 114654289636397178}
+  MasterBankRef: {fileID: 114593756644216820}
   StringsBankRef: {fileID: 114297721788165646}
-  stringsBankWriteTime: 636637004990000000
+  stringsBankWriteTime: 636638232740680701
   cacheVersion: 2
 --- !u!114 &114007414521593924
 MonoBehaviour:
@@ -44,7 +44,7 @@ MonoBehaviour:
   Path: event:/CameraMove
   guid: 9328000767a3b14c81ff58f0a4320166
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   Path: event:/CameraMoveStop
   guid: 47e40433c775a5429f6982691fe3eb6c
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -90,6 +90,21 @@ MonoBehaviour:
   MaxDistance: 25
   Length: 1000
 --- !u!114 &114037716519251544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114053294480842114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -223,7 +238,7 @@ MonoBehaviour:
   Path: event:/Land
   guid: 5b940932e8ff1b40b2707a94fe641f5c
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -268,7 +283,7 @@ MonoBehaviour:
   Path: event:/LaserShot
   guid: c93662a70703b74da20b59dd0830a7e1
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -298,6 +313,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3970
+--- !u!114 &114242207933283886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: CheckPointNum
+  Min: 0
+  Max: 3
+  Default: 0
 --- !u!114 &114264168645204750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +357,7 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: 099ee8014a050b44b6ca2047f5b75594
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -364,12 +394,12 @@ MonoBehaviour:
   Path: event:/Music
   guid: f85e78ad4286814d9ed0da55be2dce26
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114346662847013242}
+  - {fileID: 114840670915693586}
   MinDistance: 0
   MaxDistance: 0
   Length: 29142
@@ -385,8 +415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: /Users/John/Documents/GitHub/Weekly-Game-Jam-47-Theif/GameJam47 - Thief FMOD
-    Session/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636637004990000000
+    Session\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636638232740680701
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -503,7 +533,7 @@ MonoBehaviour:
   Path: event:/Death
   guid: d29e0f14e409ad4a8c33f5557f3b4983
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -559,7 +589,7 @@ MonoBehaviour:
   Path: event:/Caught
   guid: 37aeece3d4437b48a20eac2dda02669d
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -581,7 +611,7 @@ MonoBehaviour:
   Path: event:/Laser
   guid: 73e5ec27f42b6e479ff6d2d2e1376490
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -756,6 +786,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 25
   Length: 4000
+--- !u!114 &114593756644216820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\John\Documents\GitHub\Weekly-Game-Jam-47-Theif\GameJam47 - Thief
+    FMOD Session\Build\Desktop\Master Bank.bank
+  lastModified: 636638232740650570
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2382464
+  Exists: 1
 --- !u!114 &114631955877063706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,6 +895,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1686
+--- !u!114 &114666433408047808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114673921868787052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,7 +1021,7 @@ MonoBehaviour:
   Path: event:/Jump
   guid: 067b9f6fdc038b4e9fedd71dcdc2aa44
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1024,15 +1088,30 @@ MonoBehaviour:
   Path: event:/LaserGate
   guid: 462bef467deaa047a9268aab1b4c34ff
   Banks:
-  - {fileID: 114654289636397178}
+  - {fileID: 114593756644216820}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114375337950528314}
+  - {fileID: 114053294480842114}
   MinDistance: 1
   MaxDistance: 17
   Length: 5000
+--- !u!114 &114840670915693586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: CheckPointNum
+  Min: 0
+  Max: 3
+  Default: 0
 --- !u!114 &114851308013867506
 MonoBehaviour:
   m_ObjectHideFlags: 0

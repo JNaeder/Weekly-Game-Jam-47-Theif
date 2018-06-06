@@ -7,6 +7,7 @@ public class Guy_Controller : MonoBehaviour {
 
 
     public float speed, jump, fallMult, jumpMult;
+    public ParticleSystem bloodPS;
 
     float h;
 	bool isTouchingGround, isDead, isCaught;
@@ -90,18 +91,45 @@ public class Guy_Controller : MonoBehaviour {
 
 
 	public void Death(){
+        Instantiate(bloodPS, transform.position, Quaternion.identity);
+
+
         if (isDead == false) {
             FMODUnity.RuntimeManager.PlayOneShot(deathSound, transform.position);
         }
+
+
 		anim.enabled = false;
 		foreach(Rigidbody2D r in rBs){
 			r.bodyType = RigidbodyType2D.Dynamic;
 		}
-		coll.enabled = false;   
+		coll.enabled = false;
+
+
+
 		isDead = true;
+
+
+
+
         gM.RestartScreen();
 
 	}
+
+    public void ResetEverything()
+    {
+        isDead = false;
+        isCaught = false;
+        anim.enabled = true;
+        coll.enabled = true;
+        foreach (Rigidbody2D r in rBs)
+        {
+            r.bodyType = RigidbodyType2D.Kinematic;
+        }
+        rB.bodyType = RigidbodyType2D.Dynamic;
+        anim.SetBool("isDead", isDead);
+        anim.Play("Movement");
+    }
 
     public void GetCaught() {
         if (isCaught == false) {
@@ -176,13 +204,7 @@ public class Guy_Controller : MonoBehaviour {
     }
 
 
-    public void ResetEverything()
-    {
-        isDead = false;
-        isCaught = false;
-        anim.SetBool("isDead", isDead);
-        anim.Play("Movement");
-    }
+    
 
 
     public void PlayFootstepSound() {
