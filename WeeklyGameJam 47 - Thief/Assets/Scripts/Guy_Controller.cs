@@ -10,8 +10,8 @@ public class Guy_Controller : MonoBehaviour {
     public ParticleSystem bloodPS;
 
     float h;
-	bool isTouchingGround, isDead, isCaught;
-	public bool isHanging;
+	bool isTouchingGround;
+	public bool isHanging, isDead, isCaught;
 
 	GameManager gM;
 
@@ -177,13 +177,16 @@ public class Guy_Controller : MonoBehaviour {
 
 
 					// Jumping
-					if (isTouchingGround)
+					if (!gM.isPaused)
 					{
-						if (Input.GetButtonDown("Jump"))
+						if (isTouchingGround)
 						{
-							rB.AddForce(Vector2.up * 100 * jump);
-							FMODUnity.RuntimeManager.PlayOneShot(jumpSound, transform.position);
+							if (Input.GetButtonDown("Jump"))
+							{
+								rB.AddForce(Vector2.up * 100 * jump);
+								FMODUnity.RuntimeManager.PlayOneShot(jumpSound, transform.position);
 
+							}
 						}
 					}
 

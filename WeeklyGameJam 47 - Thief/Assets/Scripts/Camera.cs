@@ -105,11 +105,14 @@ public class Camera : MonoBehaviour {
 		Debug.DrawRay(camPoint.position, camPoint.up * dist, Color.red);
         if (hit.collider != null)
         {
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject.tag == "PlayerMain")
             {
                 //  print("SEE PLAYER!");
                 Guy_Controller guy = hit.collider.gameObject.GetComponent<Guy_Controller>();
-                guy.GetCaught();
+				if (guy != null)
+				{
+					guy.GetCaught();
+				}
 
             }
         }

@@ -11,6 +11,17 @@ public class MusicManager : MonoBehaviour {
     FMOD.Studio.EventInstance musicInst;
 
     GameManager gM;
+	public static MusicManager musicMan;
+
+
+	private void Awake()
+	{
+		if(musicMan == null){
+			musicMan = this;
+		} else {
+			Destroy(gameObject);
+		}
+	}
 
 	// Use this for initialization
 	void Start () {

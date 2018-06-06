@@ -43,7 +43,8 @@ public class Helicopter : MonoBehaviour {
         {
             if (hangingTrans != null)
             {
-                guy.transform.position = hangingTrans.position;
+					guy.transform.position = hangingTrans.position;
+				
             }
 
 
@@ -54,11 +55,12 @@ public class Helicopter : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.gameObject.tag == "Player"){
+		if(collision.gameObject.tag == "PlayerMain"){
 			guy = collision.gameObject.GetComponent<Guy_Controller>();
 			coll.enabled = false;
 			print("HeliCopterStart!");
 			guy.Hanging();
+			
 			isFlying = true;
 			gM.WinScreen();
 
