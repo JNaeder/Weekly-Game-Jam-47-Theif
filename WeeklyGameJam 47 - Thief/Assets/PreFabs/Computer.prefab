@@ -158,6 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 0}
   isActive: 0
+  compHum: event:/Computer Ambience
+  compHacking: event:/Computer Hacking
 --- !u!212 &212088947591092862
 SpriteRenderer:
   m_ObjectHideFlags: 1

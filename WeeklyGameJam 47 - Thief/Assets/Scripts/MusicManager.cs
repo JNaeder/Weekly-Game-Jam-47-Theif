@@ -16,6 +16,7 @@ public class MusicManager : MonoBehaviour {
 
 	private void Awake()
 	{
+        
 		if(musicMan == null){
 			musicMan = this;
 		} else {
@@ -25,6 +26,8 @@ public class MusicManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        DontDestroyOnLoad(gameObject);
+
         gM = FindObjectOfType<GameManager>();
 
         musicInst = FMODUnity.RuntimeManager.CreateInstance(musicEvent);
@@ -33,6 +36,6 @@ public class MusicManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        musicInst.setParameterValue("CheckPointNum", gM.checkNum);
+        musicInst.setParameterValue("CheckPointNum", GameManager.checkNum);
 	}
 }

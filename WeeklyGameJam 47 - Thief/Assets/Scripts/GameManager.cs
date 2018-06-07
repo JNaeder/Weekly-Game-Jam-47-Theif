@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 	public EventSystem eS;
 
 	public Transform[] checkpoints;
-	public int checkNum;
+	public static int checkNum;
 
 	Guy_Controller guy;
 	CameraScript cam;
@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
 
 	public void WinScreen()
 	{
+        
+
 		eS.SetSelectedGameObject(null);
 		winScreen.SetActive(true);
 		eS.SetSelectedGameObject(restartButton3);
@@ -82,7 +84,7 @@ public class GameManager : MonoBehaviour
 
 	public void ReLoadLevel()
 	{
-
+        checkNum = 0;
 		SceneManager.LoadScene(1);
 	}
 
@@ -110,6 +112,7 @@ public class GameManager : MonoBehaviour
 	public void UnPause()
 	{
 		pauseScreen.SetActive(false);
+        controlsScreen.SetActive(false);
 		Time.timeScale = 1;
 		isPaused = false;
 

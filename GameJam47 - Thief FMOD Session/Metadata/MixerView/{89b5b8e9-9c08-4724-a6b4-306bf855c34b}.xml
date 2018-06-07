@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="UiMixerView" id="{89b5b8e9-9c08-4724-a6b4-306bf855c34b}">
+        <property name="name">
+            <value>New Mixer View</value>
+        </property>
+        <relationship name="assignedStrips">
+            <destination>{660760d2-4622-48fd-a41e-c82f098e759a}</destination>
+            <destination>{9de005cc-98d1-4511-8d35-f81881a4ace5}</destination>
+            <destination>{a79504ce-a289-4d3c-98d0-143626b5528b}</destination>
+            <destination>{bd031933-bd65-4d11-907e-06415dfbbb75}</destination>
+            <destination>{a229de0f-91e9-4ab0-8f37-ff742d24fddd}</destination>
+            <destination>{ed93c9a8-291b-447b-b397-149942ddd7a2}</destination>
+            <destination>{8df6d1b4-4c1c-4090-ae8d-1d6061d9b25f}</destination>
+            <destination>{7ee4fea3-34ef-408a-8429-9930d0f60b84}</destination>
+            <destination>{389beb91-c2eb-41f2-89b9-2d1ad2b380e3}</destination>
+            <destination>{8a9e55bd-c297-4af8-af37-c6a8278f2f21}</destination>
+            <destination>{c417d393-3b87-4e4e-97bf-29512eca1e1a}</destination>
+            <destination>{53d67901-b526-499b-a7bc-ab841d03c0f7}</destination>
+            <destination>{1919eec7-d7a6-402a-bf79-7d81ba91aec2}</destination>
+            <destination>{ed58b593-80e5-41fa-9b77-4fceca7817d0}</destination>
+            <destination>{61bd252b-9c4c-4770-9c33-aad7a95d345f}</destination>
+            <destination>{31841e60-413b-44ec-8b94-28bd8d55a62d}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{072a75c5-e0dd-490e-9459-1377238ff16c}</destination>
+        </relationship>
+    </object>
+</objects>

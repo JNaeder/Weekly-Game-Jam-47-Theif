@@ -168,6 +168,7 @@
         <relationship name="effects">
             <destination>{5ae14bf9-5244-4271-b429-81845ff54663}</destination>
             <destination>{a75d913c-c8d7-424c-9e8d-ec2e5226ec13}</destination>
+            <destination>{3d97c634-357d-4490-bfe4-72045eb15441}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{6a9449e0-83c8-416c-8b08-c38ee07b88c7}"/>
@@ -199,6 +200,17 @@
         <property name="maximumDistance">
             <value>17</value>
         </property>
+    </object>
+    <object class="MixerSend" id="{3d97c634-357d-4490-bfe4-72045eb15441}">
+        <property name="level">
+            <value>-43</value>
+        </property>
+        <property name="inputFormat">
+            <value>2</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{4d613dd0-56a0-4817-8fd0-1b16ed4a4a02}</destination>
+        </relationship>
     </object>
     <object class="AutomationCurve" id="{010f2473-9400-4c2b-b4c0-e75bd9cf7ea5}">
         <relationship name="parameter">

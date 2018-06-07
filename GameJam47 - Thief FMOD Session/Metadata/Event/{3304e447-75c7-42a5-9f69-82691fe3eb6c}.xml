@@ -179,6 +179,7 @@
         <relationship name="effects">
             <destination>{9f40541d-4aad-463f-ae83-cf70037c69ce}</destination>
             <destination>{48469cb3-b556-4283-827f-270c7d81366c}</destination>
+            <destination>{a67ab53a-8ab8-4a32-93c9-032b322d2765}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{151220ee-05a1-41e1-9962-82b4765c2712}"/>
@@ -228,6 +229,17 @@
         <property name="soundSize">
             <value>4.70000029</value>
         </property>
+    </object>
+    <object class="MixerSend" id="{a67ab53a-8ab8-4a32-93c9-032b322d2765}">
+        <property name="level">
+            <value>-40</value>
+        </property>
+        <property name="inputFormat">
+            <value>2</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{4d613dd0-56a0-4817-8fd0-1b16ed4a4a02}</destination>
+        </relationship>
     </object>
     <object class="AutomationPoint" id="{3bca9f9a-6a56-467a-a584-fa57dbda8161}">
         <property name="position">

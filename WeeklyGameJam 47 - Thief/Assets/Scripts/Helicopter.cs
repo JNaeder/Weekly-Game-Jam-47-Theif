@@ -58,7 +58,7 @@ public class Helicopter : MonoBehaviour {
 		if(collision.gameObject.tag == "PlayerMain"){
 			guy = collision.gameObject.GetComponent<Guy_Controller>();
 			coll.enabled = false;
-			print("HeliCopterStart!");
+			//print("HeliCopterStart!");
 			guy.Hanging();
 			
 			isFlying = true;
